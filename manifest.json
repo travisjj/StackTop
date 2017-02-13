@@ -1,0 +1,13 @@
+{
+  "name": "StackTop",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "Scripts to modify the top bar",
+  "content_scripts": [
+    {
+      "matches": ["http://stackoverflow.com/*","http://meta.stackoverflow.com/*","http://*.stackexchange.com/*"],
+      "js": ["so.js"],
+      "css": ["so.css"]
+    }
+  ]
+}
