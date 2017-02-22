@@ -21,14 +21,15 @@
 		
 		//no jobs
 		var jobs = $('#nav-jobs');
-		jobs.parentNode.removeChild(jobs);
+                if(jobs) jobs.parentNode.removeChild(jobs);
 		
 		//no beta
 		var beta = $('small.beta-badge');
-		beta.parentNode.removeChild(beta);
+		if(beta) beta.parentNode.removeChild(beta);
 		
 		//docs
-		$('#nav-docs').textContent = 'Docs';
+		var docs = $('#nav-docs');
+                if(docs) docs.textContent = 'Docs';
 		
 		//mah name
 		var icon = $("a.my-profile.js-gps-track div.gravatar-wrapper-24");
@@ -43,6 +44,3 @@
 	var config = { attributes: false, childList: true, characterData: false };
 	observer.observe(document.documentElement, config);
 })();
-
-
-
