@@ -16,26 +16,6 @@ function $$(f) {
     document.body.appendChild(script).parentNode.removeChild(script);
 };
 
-//fix the new topbar
-$$(function($){
-	//no review
-	$('.-link.js-review-button').parent().remove();
-	
-	//no jobs
-	$('#nav-jobs').parent().remove();
-	
-	//no beta
-	$('small.beta-badge').remove();
-	
-	//docs
-	$('#nav-docs').text('Docs');
-	
-	//mah name
-	var icon = $("a.my-profile.js-gps-track div.gravatar-wrapper-24");
-	var name = icon[0].title;
-	$('<span style="font-size:14px;padding:0 10px;">').text(name).insertBefore(icon);
-});
-
 //Hover TopBar Icons
 $$(function($){
  $('.secondary-nav a.-link').each(function(){this.removeAttribute("title");});
